@@ -5,3 +5,20 @@
  * output: boolean
  * validate input: throw TypeError with message "expected number but received <type-of-argument>" if inputs are not numbers
  */
+/**
+ * @param {number} summand1
+ * @param {number} summand2
+ * @returns {boolean}
+ * @throws {TypeError}
+ */
+export function isAdditionGreaterThanFifty(summand1, summand2) {
+    if (typeof summand1 !== 'number') {
+        throw new TypeError(`expected number but received ${typeof summand1}`);
+    }
+    if (typeof summand2 !== 'number') {
+        throw new TypeError(`expected number but received ${typeof summand2}`);
+    }
+
+    return (summand1 + summand2) >= 50;
+}
+
